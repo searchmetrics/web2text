@@ -30,3 +30,4 @@ src/main/resources/config.codekit
 logs/
 _archive/
 __pycache__/
+.idea

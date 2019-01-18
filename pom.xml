@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.searchmetrics</groupId>
+    <artifactId>web2text-FEATURES</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <repositories>
+
+        <repository>
+            <id>in-project</id>
+            <name>In Project Repo</name>
+            <url>file://${project.basedir}/lib</url>
+        </repository>
+    </repositories>
+    <dependencies>
+
+        <!-- https://mvnrepository.com/artifact/org.scalanlp/breeze-math -->
+        <dependency>
+            <groupId>org.scalanlp</groupId>
+            <artifactId>breeze-math_2.10</artifactId>
+            <version>0.4</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup-custom</artifactId>
+            <version>1.0</version>
+            <systemPath>${project.basedir}/lib/jsoup-custom.jar</systemPath>
+            <scope>system</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>edu.knowitall</groupId>
+            <artifactId>edu.knowitall.cluewebextractor</artifactId>
+            <version>1.0</version>
+            <systemPath>${project.basedir}/lib/knowitall-cluewebextractor.jar</systemPath>
+            <scope>system</scope>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/io.spray/spray-json -->
+        <dependency>
+            <groupId>io.spray</groupId>
+            <artifactId>spray-json_2.10</artifactId>
+            <version>1.3.2</version>
+        </dependency>
+
+    </dependencies>
+
+
+</project>
