@@ -13,9 +13,19 @@ mainClass in assembly := Some("ch.ethz.dalab.web2text.Main")
 
 assemblyMergeStrategy in assembly := {
   case PathList("javax", "xml", xs @ _*)         => MergeStrategy.first
-  case PathList("org", "apache", xs @ _*)         => MergeStrategy.first
-  case PathList("com", "esotericsoftware", xs @ _*)         => MergeStrategy.first
-  case PathList("com", "google", xs @ _*)         => MergeStrategy.first
+  case PathList("org", "apache", "logging", xs @ _*) => MergeStrategy.first
+  case PathList("org", "apache", "commons", xs @ _*) => MergeStrategy.first
+  case PathList("org", "apache", xs @ _*) => MergeStrategy.discard
+  case PathList("cleaneval", xs @ _*) => MergeStrategy.discard
+  case PathList("com", "typesafe", xs @ _*)         => MergeStrategy.first
+  case PathList("com", "thoughtworks", xs @ _*)         => MergeStrategy.first
+  case PathList("com", xs @ _*)         => MergeStrategy.discard
+  case PathList("parquet", xs @ _*)         => MergeStrategy.discard
+  case PathList("tachyon", xs @ _*)         => MergeStrategy.discard
+  case PathList("tachyon", xs @ _*)         => MergeStrategy.discard
+  case PathList("org", "spark-project", xs @ _*)         => MergeStrategy.discard
+  case PathList("org", "spark_project", xs @ _*)         => MergeStrategy.discard
+  case PathList("org", "jboss", xs @ _*)         => MergeStrategy.discard
   case x =>
     val oldStrategy = (assemblyMergeStrategy in assembly).value
     oldStrategy(x)
